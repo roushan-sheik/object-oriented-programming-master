@@ -26,13 +26,26 @@ function Rectangel(width, height) {
   }.bind(this);
   //NOTE - Getter implementation with Object.defineProperty
   Object.defineProperty(this, "position", {
+    // Getter method
     get: function () {
       return position;
+    },
+    // Setter method
+    set: function (value) {
+      position = value;
     },
   });
 }
 const rect = new Rectangel(50, 100);
 rect.draw();
 console.log(rect.getPostion());
+// Get the position value using getter
 const getterResult = rect.position;
 console.log(getterResult);
+// Set the position value using setter
+rect.position = {
+  x: 100,
+  y: 200,
+};
+const getterResult2 = rect.position;
+console.log(getterResult2);
