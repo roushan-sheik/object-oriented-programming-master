@@ -19,3 +19,8 @@ printBoxSize.call(obj); //! call(obj, 50,100)
 printBoxSize.apply(obj); //! apply(obj, [50,100])
 //! call() and apply() মেথড সাথে ফাংশন কে কল করে দেয় ।
 //! কিন্তু bind() মেথড কল করে না শুধূ  execution context টা বলে দেয়।
+
+//** Solve this  */
+console.log((true + true + true) * 10);
+//! Output ? */
+//@ Rowshan Sheikh
