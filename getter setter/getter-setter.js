@@ -6,6 +6,12 @@ function Rectangel(width, height) {
     x: 50,
     y: 80,
   };
+  // Access our position from out of the method
+  this.getPostion = function () {
+    console.log(position);
+    return position;
+  };
+  // Draw method
   this.draw = function () {
     console.log("I am drawing rectanlge....");
     console.log(printProperties());
@@ -21,3 +27,4 @@ function Rectangel(width, height) {
 }
 const rect = new Rectangel(50, 100);
 rect.draw();
+console.log(rect.getPostion());
