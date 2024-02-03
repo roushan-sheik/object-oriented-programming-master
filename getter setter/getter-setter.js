@@ -24,7 +24,15 @@ function Rectangel(width, height) {
     console.log("Position X = ", position.x, "position Y = ", position.y);
     return "Printing....";
   }.bind(this);
+  //NOTE - Getter implementation with Object.defineProperty
+  Object.defineProperty(this, "position", {
+    get: function () {
+      return position;
+    },
+  });
 }
 const rect = new Rectangel(50, 100);
 rect.draw();
 console.log(rect.getPostion());
+const getterResult = rect.position;
+console.log(getterResult);
