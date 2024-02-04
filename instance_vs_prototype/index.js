@@ -8,8 +8,13 @@ Rectangle.prototype = {
   draw: function () {
     console.log("drawing...");
   },
+  //* Method Overwrite
+  //* toString মেথড কে Overwrite করা হল। 
+  toString: function () {
+    console.log("I was to string method");
+  },
 };
 const rect1 = new Rectangle(100);
-rect1.draw();
+rect1.draw(); //* draw টা কমন মেথড হবে।
 const rect2 = new Rectangle(50);
-rect2.draw();
+rect2.draw(); //* draw টা কমন মেথড হবে।
