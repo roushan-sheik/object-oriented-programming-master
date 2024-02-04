@@ -29,4 +29,5 @@ let arr = []
 Array.prototype.customMethod = function (msg) {
   console.log(msg);
 };
+// now we can use our won Array method 
 console.log(Array.prototype)
