@@ -29,10 +29,13 @@ let Output = {
 };
 //NOTE -  To define property descriptor
 Object.defineProperty(person, "name", {
-  value: "Arifa Moni",
-    //* এখানে enumerable: false করে দেওয়া হয়েছে 
-    //* তার মানে এটা hide হয়ে যাবে এটাকে access করা যাবে না।
+  value: "Rowshan",
+  //* এখানে enumerable: false করে দেওয়া হয়েছে
+  //* তার মানে এটা hide হয়ে যাবে এটাকে access করা যাবে না।
   enumerable: false,
   writable: false,
-});
-console.log(person);
+} );
+// It dose not make any sense you can not change it any way.
+person.name = "Rohan sheikh";
+console.log( person );
+// Output: { email: 'tasmiya@gmail.com', age: 20 }
