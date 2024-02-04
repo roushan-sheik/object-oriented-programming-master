@@ -13,5 +13,17 @@ let Ouput = {
   value: "Tasmiya", //* আমরা ফিক্সড একটা value দিয়ে দিতে পারি যেটা কেউ পরিবর্তন করতে পারবে না।
   writable: true, //* কেউ overwrite করতে পাবে কি না।
   enumerable: true, //* loop চালিয়ে ইটারেট করতে পারবে কি না।
-  configurable: true, // * বাইরে থেকে ডিলিট করতি পারবাে কি না। 
+  configurable: true, // * বাইরে থেকে ডিলিট করতি পারবাে কি না।
+};
+//NOTE - To see our base object property descriptor
+//base object
+let baseObj = Object.getPrototypeOf(person);
+// we want to see base object toString property descriptor
+let descriptor = Object.getOwnPropertyDescriptor( baseObj, "toString" );
+// Our existing output
+let Output = {
+  writable: true,
+  enumerable: false,
+  configurable: true,
+  value: "Function", // f
 };
