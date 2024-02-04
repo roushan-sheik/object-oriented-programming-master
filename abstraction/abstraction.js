@@ -1,3 +1,5 @@
+// NOTE  Abstraction is a fundamental concept in object-oriented programming (OOP) that refers to the practice of hiding the implementation details of an object and exposing only the essential features to the user. In JavaScript, abstraction is achieved by using abstract classes and interfaces.
+
 function Rectangel(width, height) {
   this.width = width;
   this.height = height;
