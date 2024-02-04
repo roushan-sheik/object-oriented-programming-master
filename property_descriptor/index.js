@@ -19,7 +19,7 @@ let Ouput = {
 //base object
 let baseObj = Object.getPrototypeOf(person);
 // we want to see base object toString property descriptor
-let descriptor = Object.getOwnPropertyDescriptor( baseObj, "toString" );
+let descriptor = Object.getOwnPropertyDescriptor(baseObj, "toString");
 // Our existing output
 let Output = {
   writable: true,
@@ -27,3 +27,12 @@ let Output = {
   configurable: true,
   value: "Function", // f
 };
+//NOTE -  To define property descriptor
+Object.defineProperty(person, "name", {
+  value: "Arifa Moni",
+    //* এখানে enumerable: false করে দেওয়া হয়েছে 
+    //* তার মানে এটা hide হয়ে যাবে এটাকে access করা যাবে না।
+  enumerable: false,
+  writable: false,
+});
+console.log(person);
