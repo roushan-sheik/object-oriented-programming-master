@@ -9,7 +9,7 @@ function Shape(color) {
 Shape.prototype.common = function () {
   console.log("I am common method form Shape");
 };
-//  Square obj
+//  Square obj ===============>
 function Square(width, color) {
   Shape.call(this, color);
   this.width = width;
@@ -19,10 +19,18 @@ extend(Square, Shape);
 Square.prototype.draw = function () {
   console.log("Draing...");
 };
-//Circle Obj
+// Method overriding
+Square.prototype.common = function () {
+  console.log("I am common method form Square");
+};
+//Circle Obj =============>
 function Circle(radius) {
   this.radius = radius;
 }
 extend(Circle, Shape);
+// Method overriding
+Circle.prototype.common = function () {
+  console.log("I am common method from  Circle ");
+};
 const sqr = new Square(100, "Green");
 const cir = new Circle(50);
