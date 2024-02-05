@@ -1,13 +1,19 @@
 // Shape constructor which will contain all the common methods
-function Shape() {
-
+function Shape(color) {
+  this.color = color;
 }
 // Set Shape Prototype
 Shape.prototype.commonMethod = function () {
   console.log("I am a common Method");
 };
 // Create a rectangle class to create rect.
-function Rectangle(width) {
+function Rectangle(width, color) {
+  //* Shape এর কালার প্রোপারটি টার ও এক্সেস নিতে চাচ্ছি।
+  //* আমরা যদি প্যরামিটার এর মাধ্যমে  কালার নিয়ে Shape কে কল করে দেই
+  //* তা হলে Shape এর this টা window অবজেক্ট কে রেফার করবে।
+  // Shape(color);
+  //* তাই আমরা call() মেথড এর মাধ্যমে Shape এর কনটেক্স টা বলে দিব।
+  Shape.call(this, color);
   this.width = width;
 }
 // Inherit the prototype of Shape to the Rectangle class
@@ -24,4 +30,4 @@ Rectangle.prototype.anotherMethod = function () {
 
 // create new object based on those 2 constructor
 const shape = new Shape();
-const rect = new Rectangle(100);
+const rect = new Rectangle(100, "Green");
