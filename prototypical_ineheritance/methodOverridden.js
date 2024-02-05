@@ -34,3 +34,14 @@ Circle.prototype.common = function () {
 };
 const sqr = new Square(100, "Green");
 const cir = new Circle(50);
+// instance of operator ব্যবহার করে ্আমরা parent বের করতে পারি।
+// কার child ্এটা ।  
+let obj = {};
+// obj instanceof Object;
+// true;
+// sqr instanceof Square;
+// true;
+// sqr instanceof Circle;
+// false;
+// sqr instanceof Circle;
+// false;
