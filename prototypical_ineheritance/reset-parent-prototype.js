@@ -12,11 +12,17 @@ function Rectangle(width) {
 }
 // Inherit the prototype of Shape to the Rectangle class
 Rectangle.prototype = Object.create(Shape.prototype);
-// Set another single method to the Rectangle prototype
+// Set another single method to the Rectangle prototype by using dot notation.
 Rectangle.prototype.anotherMethod = function () {
   console.log("I am another method");
 };
+// reset parent prototype by using equal sign 
+Rectangle.prototype = {
+  heroMethod: function () {
+    console.log("I am Herro method.");
+  },
+};
 
-// create new object based on 2 constructor
+// create new object based on those 2 constructor
 const shape = new Shape();
 const rect = new Rectangle(100);
