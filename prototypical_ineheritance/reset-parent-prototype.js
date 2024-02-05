@@ -9,7 +9,12 @@ function Rectangle(width) {
   this.width = width;
 }
 // Inherit the prototype of Shape to the Rectangle class
-Rectangle.prototype = Object.create(Shape.prototype);
+//* Rectangle এর prototype reset/পরিবর্তন করলে তার নিজস্ব কনস্ট্রাক্টর কে সে
+//* হারিয়ে ফেলবে, তাই তার কনস্ট্রাক্টর টা কে ও reset করে দিতে হবে।
+Rectangle.prototype = Object.create( Shape.prototype );
+//কনস্ট্রাক্টর টা কে ও reset করে দিতে হবে।
+Rectangle.prototype.constructor = Rectangle
+
 // Set another single method to the Rectangle prototype by using dot notation.
 Rectangle.prototype.anotherMethod = function () {
   console.log("I am another method");
