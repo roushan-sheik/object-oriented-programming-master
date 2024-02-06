@@ -24,3 +24,18 @@ const sakib = new Cricketer("Sakib Al Hasan", 35, "All runder", "Bangladesh");
 
 console.log(sakib);
 sakib.eat();
+
+// Lets do the same thing with class
+class Cricket {
+  constructor(name, age, type, country) {
+    this.name = name;
+    this.age = age;
+    this.type = type;
+    this.country = country;
+  }
+  eat() {
+    console.log("Eating...");
+  }
+}
+const sakib2 = new Cricket("Sakib 2", 30, "All rounder 2", "Bangladesh");
+console.log(sakib2);
