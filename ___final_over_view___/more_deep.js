@@ -9,9 +9,11 @@ Person.prototype = {
   },
 };
 // Cricketer
-function Cricketer(type, country) {
+function Cricketer(name, age, type, country) {
   this.type = type;
   this.country = country;
+  // Calling Super method
+  Person.call(this, name, age);
 }
 // Inherit the Person prototype
 Cricketer.prototype = Object.create(Person.prototype);
