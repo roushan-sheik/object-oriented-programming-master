@@ -14,6 +14,6 @@ function Cricketer(type, country) {
   this.country = country;
 }
 // Inherit the Person prototype
-Cricketer.prototype = Object.create( Person.prototype );
-
-
+Cricketer.prototype = Object.create(Person.prototype);
+// Now we have to override the constructor
+Cricketer.prototype.constructor = Cricketer;
