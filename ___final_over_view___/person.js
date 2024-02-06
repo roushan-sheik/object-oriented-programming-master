@@ -6,12 +6,11 @@ const BasePerson = {
     console.log("Sleeping...");
   },
 };
-// Person constructor 
+// Person constructor
 function Person(name) {
-  let person = {};
+  //* Object.create মেথড টা BasePerson এর prototype টা কে inherit করবে।
+  let person = Object.create(BasePerson);
   person.name = name;
-  person.eat = BasePerson.eat;
-  person.sleep = BasePerson.sleep;
   return person;
 }
 const p1 = Person("Tasmiya");
