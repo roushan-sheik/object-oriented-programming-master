@@ -19,3 +19,8 @@ function Cricketer(name, age, type, country) {
 Cricketer.prototype = Object.create(Person.prototype);
 // Now we have to override the constructor
 Cricketer.prototype.constructor = Cricketer;
+// Create a new cricketer
+const sakib = new Cricketer("Sakib Al Hasan", 35, "All runder", "Bangladesh");
+
+console.log(sakib);
+sakib.eat();
