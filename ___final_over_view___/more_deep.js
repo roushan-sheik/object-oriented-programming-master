@@ -13,3 +13,7 @@ function Cricketer(type, country) {
   this.type = type;
   this.country = country;
 }
+// Inherit the Person prototype
+Cricketer.prototype = Object.create( Person.prototype );
+
+
